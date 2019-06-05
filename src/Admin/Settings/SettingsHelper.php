@@ -28,6 +28,7 @@ class DLM_Settings_Helper {
 			'default_gateway'        => 'paypal',
 			'disable_cart'           => '0',
 			'gateway_paypal_enabled' => '1',
+			'disable_cache'          => '0',
 		) );
 	}
 

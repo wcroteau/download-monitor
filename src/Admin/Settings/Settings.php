@@ -121,6 +121,14 @@ class DLM_Admin_Settings {
 								'desc'     => __( "If enabled, downloads will be included in the site's internal search results.", 'download-monitor' ),
 								'type'     => 'checkbox'
 							),
+							array(
+								'name'     => 'dlm_disable_cache',
+								'std'      => '',
+								'label'    => __( 'Caching', 'download-monitor' ),
+								'cb_label' => __( 'Disable download cache', 'download-monitor' ),
+								'desc'     => __( "If enabled, Download Monitor will try to bypass caching when serving downloads.", 'download-monitor' ),
+								'type'     => 'checkbox'
+							),
 						)
 					)
 				)

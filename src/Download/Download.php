@@ -359,6 +359,12 @@ class DLM_Download {
 			}
 		}
 
+		// check if we need to try to bypass the cache
+		$bypass_cache = absint( download_monitor()->service( 'settings' )->get_option( 'disable_cache' ) );
+		if ( 1 === $bypass_cache ) {
+			$link = add_query_arg( 'cache', time(), $link );
+		}
+
 		return apply_filters( 'dlm_download_get_the_download_link', esc_url_raw( $link ), $this, $this->get_version() );
 	}
 
