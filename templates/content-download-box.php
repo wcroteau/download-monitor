@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="download-box-content">
 
-		<h1><?php $dlm_download->the_title(); ?></h1>
+		<h1><?php if (empty($link_text)) { $dlm_download->the_title(); } else { printf($link_text); } ?></h1>
 
 		<?php $dlm_download->the_excerpt(); ?>
 
