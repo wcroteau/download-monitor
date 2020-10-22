@@ -76,7 +76,8 @@ class DLM_Shortcodes {
 			'autop'      => false,
 			'template'   => dlm_get_default_download_template(),
 			'version_id' => '',
-			'version'    => ''
+			'version'    => '',
+			'link_text'  => ''
 		), $atts ) );
 
 		// Make id filterable
@@ -128,7 +129,7 @@ class DLM_Shortcodes {
 				ob_start();
 
 				// load template
-				$template_handler->get_template_part( 'content-download', $template, '', array( 'dlm_download' => $download ) );
+				$template_handler->get_template_part( 'content-download', $template, '', array( 'dlm_download' => $download, 'link_text' => $link_text ) );
 
 				// get output
 				$output = ob_get_clean();
